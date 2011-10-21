@@ -4,11 +4,7 @@
  */
 package net.geekweavers.jmariogame.goodsolution;
 
-import net.geekweavers.jmariogame.goodsolution.*;
 import junit.framework.TestCase;
-import net.geekweavers.jmariogame.goodsolution.Goomba;
-import net.geekweavers.jmariogame.goodsolution.JMario;
-import net.geekweavers.jmariogame.goodsolution.Koopa;
 
 /**
  *
@@ -66,5 +62,7 @@ public class JMarioTest extends TestCase {
         mario.onActionButton();
         assertEquals(mario.getMovestatus(), MoveStatus.RUNNING);
     }
+
+
 
 }
