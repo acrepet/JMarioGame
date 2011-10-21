@@ -1,7 +1,7 @@
-package org.geekweavers.jmariogame.uglysolution;
+package net.geekweavers.jmariogame.uglysolution;
 
 /**
- * an Enemie : a Koopa
+ * an Enemy : a Koopa
  * @author agnes007
  */
 public class Koopa extends Character {
@@ -15,6 +15,4 @@ public class Koopa extends Character {
     public void setHasShell(boolean hasShell) {
         this.hasShell = hasShell;
     }
-
-
 }

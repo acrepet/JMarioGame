@@ -1,17 +1,16 @@
-package org.geekweavers.jmariogame.goodsolution;
+package net.geekweavers.jmariogame.goodsolution;
 
 /**
  * Character
  * @author agnes007
  */
-public abstract class Character implements Killable {
+public abstract class Character {
 
     private String name;
     private boolean alive = true;
 
-    @Override
-    public void die() {
-        alive = false;
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 
     public boolean isAlive() {

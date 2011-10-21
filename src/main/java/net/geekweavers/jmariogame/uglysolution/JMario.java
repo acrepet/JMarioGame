@@ -1,4 +1,4 @@
-package org.geekweavers.jmariogame.uglysolution;
+package net.geekweavers.jmariogame.uglysolution;
 
 /**
  * JMario character : ugly design

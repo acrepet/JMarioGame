@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.geekweavers.jmariogame;
+package net.geekweavers.jmariogame.uglysolution;
 
 import junit.framework.TestCase;
-import org.geekweavers.jmariogame.uglysolution.Goomba;
-import org.geekweavers.jmariogame.uglysolution.JMario;
-import org.geekweavers.jmariogame.uglysolution.Koopa;
+import net.geekweavers.jmariogame.uglysolution.Goomba;
+import net.geekweavers.jmariogame.uglysolution.JMario;
+import net.geekweavers.jmariogame.uglysolution.Koopa;
 
 /**
  *
@@ -34,7 +34,7 @@ public class JMarioTest extends TestCase {
         Goomba goomba = new Goomba();
         mario.jumpOn(goomba);
         assertEquals(6, mario.score);
-        assertFalse(goomba.isAlive);
+        assertFalse(goomba.alive);
         assertEquals(0,mario.nbLifes);
     }
 
@@ -43,10 +43,10 @@ public class JMarioTest extends TestCase {
         Koopa koopa = new Koopa();
         mario.jumpOn(koopa);
         assertEquals(3, mario.score);
-        assertTrue(koopa.isAlive);
+        assertTrue(koopa.alive);
         mario.jumpOn(koopa);
         assertEquals(4, mario.score);
-        assertFalse(koopa.isAlive);
+        assertFalse(koopa.alive);
         assertEquals(0,mario.nbLifes);
     }
     public void testWinLife() {

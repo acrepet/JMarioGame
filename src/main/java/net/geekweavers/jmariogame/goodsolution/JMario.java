@@ -1,4 +1,4 @@
-package org.geekweavers.jmariogame.goodsolution;
+package net.geekweavers.jmariogame.goodsolution;
 
 /**
  * JMario character : good design
