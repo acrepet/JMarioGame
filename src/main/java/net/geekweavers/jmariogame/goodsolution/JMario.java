@@ -7,21 +7,21 @@ package net.geekweavers.jmariogame.goodsolution;
 public class JMario extends Character {
 
     private int score;
-    private int nbLifes;
-    private Suit suit;
-    private MoveStatus movestatus;
+    private int nbLives;
+    private Suit suit = new BlueSuit();
+    private MoveStatus movestatus = MoveStatus.WALKING;
 
     public JMario(int score) {
         this.score = score;
     }
 
-    public void jumpOn(Enemy other) {
+    public void jumpOn(Landable other) {
         other.onLanded(this);
     }
-    
-    public void walk(){
-        setMovestatus(MoveStatus.WALKING);
-        suit.execute(this);   
+
+
+    public void onActionButton(){
+        suit.execute(this);
     }
 
     public MoveStatus getMovestatus() {
@@ -39,24 +39,19 @@ public class JMario extends Character {
     public void setSuit(Suit suit) {
         this.suit = suit;
     }
-    
 
-    public void increaseScore(int gain) {
-        while (gain > 0) {
-            score++;
-            if ((score % 10) == 0) {
-                nbLifes++;
-            }
-            gain--;
+    public void increaseScore() {
+        score++;
+        if ((score % 10) == 0) {
+            nbLives++;
         }
     }
 
-    public int getNbLifes() {
-        return nbLifes;
+    public int getNbLives() {
+        return nbLives;
     }
 
     public int getScore() {
         return score;
     }
-    
 }

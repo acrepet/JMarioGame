@@ -10,5 +10,6 @@ package net.geekweavers.jmariogame.goodsolution;
  */
 public enum MoveStatus {
     WALKING,
+    RUNNING,
     FLYING;
 }

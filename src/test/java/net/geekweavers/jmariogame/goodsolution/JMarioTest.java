@@ -34,9 +34,9 @@ public class JMarioTest extends TestCase {
         JMario mario = new JMario(3);
         Goomba goomba = new Goomba();
         mario.jumpOn(goomba);
-        assertEquals(6, mario.getScore());
+        assertEquals(4, mario.getScore());
         assertFalse(goomba.isAlive());
-        assertEquals(0,mario.getNbLifes());
+        assertEquals(0, mario.getNbLives());
     }
 
     public void testJumpOnKoopa() {
@@ -48,24 +48,27 @@ public class JMarioTest extends TestCase {
         mario.jumpOn(koopa);
         assertEquals(4, mario.getScore());
         assertFalse(koopa.isAlive());
-        assertEquals(0,mario.getNbLifes());
+        assertEquals(0, mario.getNbLives());
     }
+
     public void testWinLife() {
         JMario mario = new JMario(3);
         Goomba goomba = new Goomba();
-        mario.jumpOn(goomba);
-        mario.jumpOn(goomba);
-        mario.jumpOn(goomba);
-        assertEquals(12, mario.getScore());
-        assertEquals(1,mario.getNbLifes());
+        for (int i = 0; i < 10; i++) {
+            mario.jumpOn(goomba);
+        }
+        assertEquals(13, mario.getScore());
+        assertEquals(1, mario.getNbLives());
     }
-    public void testBlueSuit(){
+
+    public void testBlueSuit() {
         JMario mario = new JMario(3);
         mario.setSuit(new BlueSuit());
         mario.walk();
-        assertEquals(mario.getMovestatus(), MoveStatus.WALKING);
+        assertEquals(mario.getMovestatus(), MoveStatus.RUNNING);
     }
-    public void testTanookiSuit(){
+
+    public void testTanookiSuit() {
         JMario mario = new JMario(3);
         mario.setSuit(new TanookiSuit());
         mario.walk();

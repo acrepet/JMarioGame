@@ -1,10 +1,10 @@
 package net.geekweavers.jmariogame.goodsolution;
 
 /**
- * Koopa Enemy
+ * Koopa Landable
  * @author agnes007
  */
-public class Koopa extends Enemy implements Killable {
+public class Koopa extends Character implements Killable,Landable {
 
     private boolean hasShell = true;
 
@@ -24,7 +24,7 @@ public class Koopa extends Enemy implements Killable {
         } // if koopa hasn't a shell, it dies!
         else {
             die();
-            jumper.increaseScore(1);
+            jumper.increaseScore();
         }
     }
 

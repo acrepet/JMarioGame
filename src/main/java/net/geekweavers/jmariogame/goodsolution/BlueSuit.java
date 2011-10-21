@@ -13,6 +13,7 @@ public class BlueSuit implements Suit{
 
     public void execute(JMario jmario) {
         // Nothing unless one step!
+        jmario.setMovestatus(MoveStatus.RUNNING);
     }
     
 }

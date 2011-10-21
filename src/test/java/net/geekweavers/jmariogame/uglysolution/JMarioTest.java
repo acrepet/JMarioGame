@@ -33,9 +33,9 @@ public class JMarioTest extends TestCase {
         JMario mario = new JMario(3);
         Goomba goomba = new Goomba();
         mario.jumpOn(goomba);
-        assertEquals(6, mario.score);
+        assertEquals(4, mario.score);
         assertFalse(goomba.alive);
-        assertEquals(0,mario.nbLifes);
+        assertEquals(0,mario.nbLives);
     }
 
     public void testJumpOnKoopa() {
@@ -47,15 +47,15 @@ public class JMarioTest extends TestCase {
         mario.jumpOn(koopa);
         assertEquals(4, mario.score);
         assertFalse(koopa.alive);
-        assertEquals(0,mario.nbLifes);
+        assertEquals(0,mario.nbLives);
     }
     public void testWinLife() {
         JMario mario = new JMario(3);
         Goomba goomba = new Goomba();
-        mario.jumpOn(goomba);
-        mario.jumpOn(goomba);
-        mario.jumpOn(goomba);
-        assertEquals(12, mario.score);
-        assertEquals(0,mario.nbLifes); // or 1
+        for (int i = 0; i < 10; i++) {
+            mario.jumpOn(goomba);
+        }
+        assertEquals(13, mario.score);
+        assertEquals(1, mario.nbLives);
     }
 }

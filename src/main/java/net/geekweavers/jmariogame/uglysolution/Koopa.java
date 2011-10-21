@@ -8,7 +8,7 @@ public class Koopa extends Character {
 
     private boolean hasShell = true;
 
-    public boolean doesHaveShell() {
+    public boolean hasShell() {
         return hasShell;
     }
 
@@ -23,7 +23,7 @@ public class Koopa extends Character {
      */
     public void react(JMario jumper) {
         // if koopa has a shell, it loses it!
-        if (doesHaveShell()) {
+        if (hasShell()) {
            setHasShell(false);
         } // if koopa hasn't a shell, it dies!
         else {
@@ -37,5 +37,5 @@ public class Koopa extends Character {
 
 
 //            if ((jumper.score % 10) == 0) {
-//                jumper.nbLifes++;
+//                jumper.nbLives++;
 //            }

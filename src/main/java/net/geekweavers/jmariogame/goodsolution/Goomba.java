@@ -1,15 +1,15 @@
 package net.geekweavers.jmariogame.goodsolution;
 
 /**
- * Goomba Enemy
+ * Goomba Landable
  * @author agnes007
  */
-public class Goomba extends Enemy implements Killable {
+public class Goomba extends Character implements Killable,Landable {
 
     @Override
     public void onLanded(JMario jumper) {
         die();
-        jumper.increaseScore(3);
+        jumper.increaseScore();
     }
 
     public void die() {

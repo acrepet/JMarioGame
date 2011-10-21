@@ -7,7 +7,7 @@ package net.geekweavers.jmariogame.uglysolution;
 public class JMario extends Character {
 
     public int score;
-    public int nbLifes;
+    public int nbLives;
 
     public JMario(int score) {
         this.score = score;
@@ -30,36 +30,4 @@ public class JMario extends Character {
             koopa.react(this);
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//    // ################### WITH ENCAPSULATION ##########################
-//    public void increaseScore(int gain) {
-//        while (gain > 0) {
-//            score++;
-//            if ((score % 10) == 0) {
-//                nbLifes++;
-//            }
-//            gain--;
-//        }
-//    }
 }
