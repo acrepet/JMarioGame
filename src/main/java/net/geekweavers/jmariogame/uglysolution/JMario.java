@@ -13,68 +13,46 @@ public class JMario extends Character {
         this.score = score;
     }
 
-
-// ################### WITHOUT ENCAPSULATION ##########################
     /**
-     * When JMario jumps on a Goomba, it dies and JMario wins 3 points
+     * what happens when JMario jumps on an enemy
      * @param other 
      */
-    public void jumpOn(Goomba goomba) {
-        goomba.die();
-        for (int i = 0; i < 3; i++) {
-            score++;
-            if ((score % 10) == 0) {
-                nbLifes++;
-            }
-
+    public void jumpOn(Character enemy) {
+        // When JMario jumps on a Goomba, it dies and JMario wins 3 points
+        if (enemy instanceof Goomba) {
+            Goomba goomba = (Goomba) enemy;
+            goomba.blowUp(this);
+        }
+        //When JMario jumps on a Koopa
+        // It dies only it hasn't shell and then JMario wins 1 points
+        else if (enemy instanceof Koopa) {
+            Koopa koopa = (Koopa) enemy;
+            koopa.react(this);
         }
     }
-
-    /**
-     * When JMario jumps on a Koopa
-     * It dies only it hasn't shell and then JMario wins 1 points
-     * @param other 
-     */
-    public void jumpOn(Koopa koopa) {
-        // if koopa has a shell, it loses it!
-        if (koopa.doesHaveShell()) {
-            koopa.setHasShell(false);
-        } // if koopa hasn't a shell, it dies!
-        else {
-            koopa.die();
-            score++;
-            if ((score % 10) == 0) {
-                nbLifes++;
-            }
-        }
-    }
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 //    // ################### WITH ENCAPSULATION ##########################
-//    /**
-//     * When JMario jumps on a Goomba, it dies and JMario wins 3 points
-//     * @param other 
-//     */
-//    public void jumpOn(Goomba goomba) {
-//        goomba.die();
-//        increaseScore(3);
-//    }
-//
-//    /**
-//     * When JMario jumps on a Koopa
-//     * It dies only it hasn't shell and then JMario wins 1 points
-//     * @param other 
-//     */
-//    public void jumpOn(Koopa koopa) {
-//        // if koopa has a shell, it loses it!
-//        if (koopa.doesHaveShell()) {
-//            koopa.setHasShell(false);
-//        } // if koopa hasn't a shell, it dies!
-//        else {
-//            koopa.die();
-//            increaseScore(1);
-//        }
-//    }
-//
 //    public void increaseScore(int gain) {
 //        while (gain > 0) {
 //            score++;

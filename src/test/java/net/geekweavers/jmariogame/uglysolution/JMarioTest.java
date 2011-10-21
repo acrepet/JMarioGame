@@ -56,6 +56,6 @@ public class JMarioTest extends TestCase {
         mario.jumpOn(goomba);
         mario.jumpOn(goomba);
         assertEquals(12, mario.score);
-        assertEquals(1,mario.nbLifes);
+        assertEquals(0,mario.nbLifes); // or 1
     }
 }

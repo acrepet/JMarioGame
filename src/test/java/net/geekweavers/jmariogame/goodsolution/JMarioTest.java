@@ -59,4 +59,16 @@ public class JMarioTest extends TestCase {
         assertEquals(12, mario.getScore());
         assertEquals(1,mario.getNbLifes());
     }
+    public void testBlueSuit(){
+        JMario mario = new JMario(3);
+        mario.setSuit(new BlueSuit());
+        mario.walk();
+        assertEquals(mario.getMovestatus(), MoveStatus.WALKING);
+    }
+    public void testTanookiSuit(){
+        JMario mario = new JMario(3);
+        mario.setSuit(new TanookiSuit());
+        mario.walk();
+        assertEquals(mario.getMovestatus(), MoveStatus.FLYING);
+    }
 }
