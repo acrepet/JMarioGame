@@ -63,15 +63,8 @@ public class JMarioTest extends TestCase {
 
     public void testBlueSuit() {
         JMario mario = new JMario(3);
-        mario.setSuit(new BlueSuit());
-        mario.walk();
+        mario.onActionButton();
         assertEquals(mario.getMovestatus(), MoveStatus.RUNNING);
     }
 
-    public void testTanookiSuit() {
-        JMario mario = new JMario(3);
-        mario.setSuit(new TanookiSuit());
-        mario.walk();
-        assertEquals(mario.getMovestatus(), MoveStatus.FLYING);
-    }
 }
