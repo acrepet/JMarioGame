@@ -4,11 +4,7 @@
  */
 package net.geekweavers.jmariogame.goodsolution;
 
-import net.geekweavers.jmariogame.goodsolution.*;
 import junit.framework.TestCase;
-import net.geekweavers.jmariogame.goodsolution.Goomba;
-import net.geekweavers.jmariogame.goodsolution.JMario;
-import net.geekweavers.jmariogame.goodsolution.Koopa;
 
 /**
  *
@@ -64,14 +60,14 @@ public class JMarioTest extends TestCase {
     public void testBlueSuit() {
         JMario mario = new JMario(3);
         mario.setSuit(new BlueSuit());
-        mario.walk();
+        mario.onActionButton();
         assertEquals(mario.getMovestatus(), MoveStatus.RUNNING);
     }
 
     public void testTanookiSuit() {
         JMario mario = new JMario(3);
         mario.setSuit(new TanookiSuit());
-        mario.walk();
+        mario.onActionButton();
         assertEquals(mario.getMovestatus(), MoveStatus.FLYING);
     }
 }
