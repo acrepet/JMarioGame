@@ -1,21 +1,15 @@
 package org.geekweavers.jmariogame.goodsolution;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 /**
- *
+ * Character
  * @author agnes007
  */
-public abstract class Character {
-    
+public abstract class Character implements Killable {
+
     private String name;
-    
     private boolean alive = true;
 
+    @Override
     public void die() {
         alive = false;
     }
@@ -23,8 +17,4 @@ public abstract class Character {
     public boolean isAlive() {
         return alive;
     }
-    
-    
-
-    
 }

@@ -9,8 +9,8 @@ package org.geekweavers.jmariogame.goodsolution;
 public class Goomba extends Enemy{
 
     @Override
-    public void beJumped(JMario jumper) {
-        super.die();
+    public void onLanded(JMario jumper) {
+        die();
         jumper.increaseScore(3);
     }
 

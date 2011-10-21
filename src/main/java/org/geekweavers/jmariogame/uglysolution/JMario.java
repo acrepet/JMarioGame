@@ -13,13 +13,6 @@ public class JMario extends Character {
         this.score = score;
     }
 
-    public void run() {
-        // TODO code application logic here
-    }
-
-    public void walk() {
-        // TODO code application logic here
-    }
 
 // ################### WITHOUT ENCAPSULATION ##########################
     /**

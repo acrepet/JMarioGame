@@ -1,12 +1,10 @@
 package org.geekweavers.jmariogame.goodsolution;
 
-
 /**
- * an Enemy : a Koopa
+ * Koopa Enemy
  * @author agnes007
  */
-public class Koopa extends Enemy{
-
+public class Koopa extends Enemy {
 
     private boolean hasShell = true;
 
@@ -19,16 +17,14 @@ public class Koopa extends Enemy{
     }
 
     @Override
-    public void beJumped(JMario jumper) {
+    public void onLanded(JMario jumper) {
         // if koopa has a shell, it loses it!
         if (this.doesHaveShell()) {
             this.setHasShell(false);
         } // if koopa hasn't a shell, it dies!
         else {
-            super.die();
+            die();
             jumper.increaseScore(1);
         }
     }
-
-    
 }
