@@ -8,7 +8,8 @@ public class JMario extends Character {
 
     private int score;
     private int nbLives;
-    private BlueSuit bluesuit = new BlueSuit();
+   // private BlueSuit bluesuit = new BlueSuit();
+    private Suit suit;
     private MoveStatus movestatus = MoveStatus.WALKING;
 
     public JMario(int score) {
@@ -19,9 +20,16 @@ public class JMario extends Character {
         other.onLanded(this);
     }
 
+    public Suit getSuit() {
+        return suit;
+    }
+
+    public void setSuit(Suit suit) {
+        this.suit = suit;
+    }
 
     public void onActionButton(){
-        bluesuit.execute(this);
+        suit.execute(this);
     }
 
     public MoveStatus getMovestatus() {

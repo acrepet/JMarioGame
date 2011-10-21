@@ -5,9 +5,10 @@
 package net.geekweavers.jmariogame.goodsolution;
 
 /**
- * Suit (command pattern)
+ *
  * @author agnes007
  */
 public interface Suit {
     public void execute(JMario jmario);
+    
 }

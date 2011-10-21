@@ -59,9 +59,46 @@ public class JMarioTest extends TestCase {
 
     public void testBlueSuit() {
         JMario mario = new JMario(3);
+        Suit buesuit = new BlueSuit();
+        mario.setSuit(buesuit);
         mario.onActionButton();
         assertEquals(mario.getMovestatus(), MoveStatus.RUNNING);
     }
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    public void testOtherSuit() {
+//        JMario mario = new JMario(3);
+//        Suit aSuit = mock(Suit.class);
+//        mario.setSuit(aSuit);
+//        mario.onActionButton();
+//        // selective and explicit verification
+//        verify(aSuit).execute(mario);
+//        verify(aSuit);
+//    }
 
 
 

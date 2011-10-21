@@ -8,7 +8,7 @@ package net.geekweavers.jmariogame.goodsolution;
  *
  * @author agnes007
  */
-public class TanookiSuit implements Suit{
+public class TanookiSuit{
 
     public void execute(JMario jmario) {
         // moving the mario tail and perhaps Mario could fly!
