@@ -14,11 +14,16 @@ public abstract class Character {
     
     private String name;
     
-    private boolean isAlive = true;
+    private boolean alive = true;
 
     public void die() {
-        isAlive = false;
+        alive = false;
     }
+
+    public boolean isAlive() {
+        return alive;
+    }
+    
     
 
     

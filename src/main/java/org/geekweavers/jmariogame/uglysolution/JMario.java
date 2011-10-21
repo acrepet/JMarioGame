@@ -1,7 +1,7 @@
 package org.geekweavers.jmariogame.uglysolution;
 
 /**
- * JMario character
+ * JMario character : ugly design
  * @author agnes007
  */
 public class JMario extends Character {

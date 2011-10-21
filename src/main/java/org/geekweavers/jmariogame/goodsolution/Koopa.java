@@ -2,21 +2,33 @@ package org.geekweavers.jmariogame.goodsolution;
 
 
 /**
- * an Enemie : a Koopa
+ * an Enemy : a Koopa
  * @author agnes007
  */
-public class Koopa extends Enemie{
+public class Koopa extends Enemy{
 
 
+    private boolean hasShell = true;
 
-    @Override
-    public void beJumped(Character jumper) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public boolean doesHaveShell() {
+        return hasShell;
+    }
+
+    public void setHasShell(boolean hasShell) {
+        this.hasShell = hasShell;
     }
 
     @Override
-    public void getTouched(Character contact) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void beJumped(JMario jumper) {
+        // if koopa has a shell, it loses it!
+        if (this.doesHaveShell()) {
+            this.setHasShell(false);
+        } // if koopa hasn't a shell, it dies!
+        else {
+            super.die();
+            jumper.increaseScore(1);
+        }
     }
+
     
 }

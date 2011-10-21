@@ -1,0 +1,14 @@
+# Compiled source #
+###################
+*.class
+
+
+# Directories #
+###################
+target/
+vpproject/
+nbproject/
+
+# For Mac OS #
+###################
+*.DS_Store

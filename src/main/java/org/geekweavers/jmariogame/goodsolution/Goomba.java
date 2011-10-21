@@ -3,19 +3,15 @@ package org.geekweavers.jmariogame.goodsolution;
 
 
 /**
- *
+ * Goomba Enemy
  * @author agnes007
  */
-public class Goomba extends Enemie{
+public class Goomba extends Enemy{
 
     @Override
-    public void beJumped(Character jumper) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void getTouched(Character contact) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void beJumped(JMario jumper) {
+        super.die();
+        jumper.increaseScore(3);
     }
 
 

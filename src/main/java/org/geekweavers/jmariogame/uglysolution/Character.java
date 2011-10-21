@@ -8,10 +8,10 @@ public abstract class Character {
     
     public String name;
     
-    public boolean isAlive = true;
+    public boolean alive = true;
 
     public void die() {
-        isAlive = false;
+        alive = false;
     }
     
    
